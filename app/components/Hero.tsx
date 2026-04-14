@@ -28,13 +28,6 @@ const lineVariants: Variants = {
   }),
 };
 
-const orbs = [
-  { size: 600, left: '-10%', top: '-15%', color: 'rgba(34,211,238,0.07)', duration: 9, delay: 0 },
-  { size: 400, left: '62%', top: '35%', color: 'rgba(21,96,189,0.12)', duration: 13, delay: 2 },
-  { size: 280, left: '28%', top: '60%', color: 'rgba(34,211,238,0.05)', duration: 7, delay: 1 },
-  { size: 200, left: '82%', top: '8%', color: 'rgba(34,211,238,0.09)', duration: 11, delay: 3 },
-];
-
 interface StatProps {
   end: number;
   suffix: string;
@@ -95,30 +88,6 @@ export function Hero() {
             'linear-gradient(to bottom, rgba(8,14,30,0.50) 0%, rgba(8,14,30,0.68) 50%, rgba(8,14,30,0.97) 100%)',
         }}
       />
-
-      {/* Animated orbs */}
-      {orbs.map((orb, i) => (
-        <motion.div
-          key={i}
-          className="absolute rounded-full pointer-events-none"
-          style={{
-            width: orb.size,
-            height: orb.size,
-            left: orb.left,
-            top: orb.top,
-            background: orb.color,
-            filter: 'blur(90px)',
-          }}
-          animate={{ y: [0, 50, 0], x: [0, 30, 0], scale: [1, 1.1, 1] }}
-          transition={{
-            duration: orb.duration,
-            delay: orb.delay,
-            repeat: Infinity,
-            repeatType: 'mirror',
-            ease: 'easeInOut',
-          }}
-        />
-      ))}
 
       {/* Scrolling grid lines for depth */}
       <div
