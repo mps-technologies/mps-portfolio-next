@@ -119,11 +119,9 @@ export function ClientWork() {
               {testimonial.logo && (
                 <motion.div
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 0.6 }}
+                  animate={{ opacity: 0.6 }}
                   whileHover={{ opacity: 1, filter: "grayscale(0%)" }}
-                  style={{ filter: "grayscale(100%)" }}
-                  className="transition-opacity duration-500"
-                >
+                  style={{ filter: "grayscale(100%)" }}>
                   <Image
                     src={testimonial.logo}
                     alt={`${testimonial.author} Logo`}

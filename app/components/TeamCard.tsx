@@ -14,17 +14,15 @@ export function TeamCard({ member, index }: TeamCardProps) {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: index * 0.15 }}
-      whileHover={{ y: -6 }}
-      className="flex flex-col items-center text-center p-8 rounded-2xl bg-card transition-all duration-300 group"
+      // transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -10 }}
+      className="flex flex-col items-center text-center p-8 rounded-2xl bg-card group"
       style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.07)' }}
     >
       {/* Avatar */}
       <div className="relative mb-5 w-28 h-28">
         <motion.div
           className="h-full rounded-full overflow-hidden relative"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
           style={{
             border: '3px solid var(--color-primary)',
             boxShadow: '0 0 0 4px rgba(34,211,238,0.12)',
